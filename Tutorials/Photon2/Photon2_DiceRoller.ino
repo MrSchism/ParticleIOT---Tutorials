@@ -1,6 +1,8 @@
 /***************************************************
 Developer: Joshua "SinSchism" Embrey
 Date:20240502
+Device: Particle Photon 2
+OS: Particle.io DeviceOS 5.7.0
 
 Description:
 Demo for connecting Particle Photon 2 to the affordable
