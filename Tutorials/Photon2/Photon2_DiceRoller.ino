@@ -35,6 +35,7 @@ Adafruit_ILI9341 graphics test app.
 void setup() {
     
   Serial.begin(9600);                               // Set serial speed and begin
+  SPI.setClockSpeed(50, MHZ);                       // set SPI clock speed 
   pinMode(buttonPin, INPUT_PULLUP);                 // Set the pinmode for our button to an input pullup
 
   tft.begin();                                      // begin the TFT functions  
