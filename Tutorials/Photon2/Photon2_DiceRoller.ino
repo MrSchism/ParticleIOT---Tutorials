@@ -72,13 +72,13 @@ void loop(void) {
     bool val = digitalRead(buttonPin) == LOW;       // tie the val variable to a boolean LOW
     if (val == HIGH){                               // if the button is pressed, signified by when val goes HIGH
         diceVal = random(1, 7);                     // assigns diceVal a random number between 1 and 6 (7 is the excluded upper bound)
-        testText();                                 // run the testText function
+        dieRoller();                                 // run the dieRoller function
         delay(100);                                 // wait 100ms to accept next request
     }
 }
 
 
-unsigned long testText() {
+unsigned long dieRoller() {
   unsigned long start = micros();                   // start the timing            
   tft.fillScreen(ILI9341_BLACK);                    // Fill the screen with black
   tft.setCursor(0, 0);                              // set the cursor to the start
