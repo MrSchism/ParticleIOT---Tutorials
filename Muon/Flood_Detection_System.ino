@@ -32,9 +32,14 @@ void loop(){
     digitalWrite(powerA, LOW);
     
     // -- TESTING -- If you encounter unusual readings or a lack of alert, ensure pinout is correct.
-    // -- TESTING -- Uncomment the lines below and comment out the if statement below
-    //Particle.publish("Sensor A - Water Level: ", String(valA));
-    //delay(2000);
+    // -- TESTING -- Uncomment the lines below to test possibly bad sensors.
+    // -- TESTING -- Ensure you re-comment the below lines and re-flash before continuing.
+    // digitalWrite(powerA, HIGH);
+    // while(true){
+    //  analogRead(signalA);
+    //  Particle.publish("TEST - Sensor A - Water Level: ", String(valA));
+    //  delay(5000);
+    // }
     
     if (valA >= 5){                                                                 // When the contact switch closes, it makes relevant val high 
         Particle.publish("FLOOD ALERT - Sensor A - Water Level:", String(valA));    // Publish the Water Sensor alert
